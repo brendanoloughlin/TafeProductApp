@@ -22,6 +22,8 @@ namespace ProductApps
     {
         Product cProduct;
 
+        double totalGST = 0.0;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -36,6 +38,7 @@ namespace ProductApps
                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
                 totalChargeTextBlock.Text = Convert.ToString(cProduct.TotalPayment += 25);
                 totalWrapTextBlock.Text = Convert.ToString(cProduct.TotalPayment += 5);
+                totalGSTTextBlock.Text = Convert.ToString(cProduct.TotalPayment * 1.1m);
             }
             catch (FormatException)
             {
